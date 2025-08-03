@@ -1,7 +1,7 @@
 struct MCF {
   struct edge {
     ll to, from, cap, flow, cost, rev;
-  } * fromE[MAXN];
+  } *fromE[MAXN];
   vector<edge> v[MAXN];
   ll n, s, t, flows[MAXN], dis[MAXN], pi[MAXN], flowlim;
   void make_edge(int s, int t, ll cap, ll cost) {
@@ -53,8 +53,7 @@ struct MCF {
   pll solve(int _s, int _t, ll _flowlim = INF) {
     s = _s, t = _t, flowlim = _flowlim;
     pll re;
-    while (re.F != flowlim && AP(re.F))
-      ;
+    while (re.F != flowlim && AP(re.F));
     for (int i = 0; i < n; i++)
       for (edge &e : v[i])
         if (e.flow != 0) re.S += e.flow * e.cost;

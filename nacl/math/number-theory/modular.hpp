@@ -1,4 +1,4 @@
-#include "extgcd.hpp"
+array<int, 2> extgcd(int a, int b);
 
 template <typename T> struct M {
   static T MOD; // change to constexpr if already known
@@ -14,11 +14,11 @@ template <typename T> struct M {
   M operator+(M b) { return M(v + b.v); }
   M operator-(M b) { return M(v - b.v); }
   M operator*(M b) { return M((__int128)v * b.v % MOD); }
-  M operator/(M b) { return *this * (b ^ (MOD - 2)); }
+  M operator/(M b) { return *this * b.inv(); }
   // change above implementation to this if MOD is not prime
   M inv() {
-    auto [p, _, g] = extgcd(v, MOD);
-    return assert(g == 1), p;
+    auto [x, g] = extgcd(v, MOD);
+    return assert(g == 1), x < 0 ? x + MOD : x;
   }
   friend M operator^(M a, ll b) {
     M ans(1);
