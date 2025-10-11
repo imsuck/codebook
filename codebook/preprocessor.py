@@ -11,10 +11,8 @@ def process_code(filename):
     C_COMMENT_RE = re.compile(r'\s*///.*$')
     PY_COMMENT_RE = re.compile(r'\s*###.*$')
     with open(filename, 'r') as file:
+        started = False
         for line in file:
-            if line.strip() == '':
-                yield '\n'
-                continue
             if line.endswith(KEEP_LINE_MACRO):
                 line = line.rstrip(KEEP_LINE_MACRO) + '\n'
             else:
@@ -22,6 +20,13 @@ def process_code(filename):
                 line = CLANG_FORMAT_RE.sub('', line)
                 line = C_COMMENT_RE.sub('', line)
                 line = PY_COMMENT_RE.sub('', line)
+            if not started:
+                if line.strip() == '':
+                    continue
+                started = True
+            if line.strip() == '':
+                yield '\n'
+                continue
             if line:
                 yield line
 

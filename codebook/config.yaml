@@ -41,9 +41,14 @@ include:
       - ds/wavelet-matrix.hpp
     - Link-Cut Tree:
       - ds/lct.hpp
+    - Dynamic MST:
+      - ds/dyn-mst.hpp
   - Graph:
     - Modeling:
       - graph/model.tex
+    - Shortest paths:
+      - Dial's algorithm:
+        - graph/dial.hpp
     - Matching/Flows:
       - Dinic's Algorithm:
         - graph/flows/dinic.hpp
@@ -56,10 +61,14 @@ include:
       - Bipartite Minimum Cover:
         - graph/flows/min-bi-cover.hpp
     - Strongly Connected Components:
+      - graph/scc.hpp
       - 2-Satisfiability:
         - graph/2sat.hpp
     - Manhattan Distance MST:
       - graph/manhattan-mst.hpp
+    - Functional graph:
+      - Loops:
+        - graph/func.hpp
   - Math:
     - Number Theory:
       - Mod Struct:
@@ -74,6 +83,8 @@ include:
         - math/combinatorics/formulas.tex
       - Stirling:
         - math/combinatorics/stirling.hpp
+      - Extended Lucas:
+        - math/combinatorics/lucas.hpp
     - Theorems:
       - math/theorems.tex
   - Numeric:
@@ -95,6 +106,8 @@ include:
         - numeric/det-double.hpp
       - Solve Linear Equation:
         - numeric/linear-eq.hpp
+      - Freivalds' algo:
+        - numeric/freivalds.tex
     - Polynomial Interpolation:
       - numeric/interpolation.hpp
   - Geometry:

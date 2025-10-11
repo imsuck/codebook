@@ -1,7 +1,8 @@
-# NaCl - NCTU_a Contest library
+# Acknowledgement
+## NaCl - NCTU_a Contest library
+Basically from the [ICPC codebook of team NCTU_a](https://github.com/ToxicPie/NaCl).
 
-ICPC codebook of the team NCTU_a.
-
+# Stuff
 ## Building
 
 Run `make codebook` to build the PDF. 
@@ -13,7 +14,7 @@ Editing the codebook's content should be very simple, thanks to the automated
 TeX file generator. 
 
 To add new content to the codebook, first put the files to add (code snippets 
-or TeX files) somewhere under `nacl/`. You may also modify existing files.
+or TeX files) somewhere under `src/`. You may also modify existing files.
 
 To change the files to include, section names, or arrangements, etc., edit 
 `codebook/config.yaml`. It should have a structure like this:
@@ -36,7 +37,7 @@ some_additional_configs:
   ...
 ```
 
-Paths should be relative to `nacl/`. `.tex` files will be directly inputted, 
+Paths should be relative to `src/`. `.tex` files will be directly inputted, 
 and other files will be shown as highlighted code. 
 See the default config file for a complete example.
 

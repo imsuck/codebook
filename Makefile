@@ -15,7 +15,7 @@ codebook: format
 	mv codebook/main.pdf codebook.pdf
 
 format:
-	find nacl/ -type f -regex ".*\.\(c\|h\|cpp\|hpp\)" \
+	find src/ -type f -regex ".*\.\(c\|h\|cpp\|hpp\)" \
 		-exec $(CLANG_FORMAT) -i {} +
 
 tests:

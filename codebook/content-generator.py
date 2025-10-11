@@ -87,7 +87,7 @@ def generate_content(config):
                 for subtitle, subsections in section.items():
                     parse_all(subsections, subtitle)
             elif isinstance(section, str):
-                path = str((Path('../nacl') / Path(section)).resolve())
+                path = str((Path('../src') / Path(section)).resolve())
                 lexer = pygments.lexers.find_lexer_class_for_filename(path)
                 lang = lexer.aliases[0]
                 if path in file_info_map:
@@ -120,7 +120,7 @@ def generate_content(config):
                     yield from generate_content_internal(
                         subsections, subtitle, depth + 1)
             elif isinstance(section, str):
-                path = str((Path('../nacl') / Path(section)).resolve())
+                path = str((Path('../src') / Path(section)).resolve())
                 title, lang = file_info_map[path]
                 if lang == 'tex':
                     yield f'\\input{{{path}}}'

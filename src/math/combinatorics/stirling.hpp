@@ -18,3 +18,10 @@ template <class T> auto stirling2(int n) {
   }
   return dp;
 }
+template <class T> auto bell(int n) {
+  vector<T> dp(n + 1, 0);
+  auto S = stirling2<T>(n);
+  for (int i = 0; i <= n; ++i)
+    for (int k = 0; k <= i; ++k) dp[i] += S[i][k];
+  return dp;
+}
