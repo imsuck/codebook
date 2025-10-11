@@ -60,3 +60,45 @@
       \item Create edge $(x, y)$ and edge $(x^\prime, y^\prime)$ with capacity $c_{xyx^\prime y^\prime}$.
     \end{enumerate}
 \end{itemize}
+
+% Source: ChatGPT x.x
+
+\begin{itemize}
+    \item Hall's Marriage Theorem
+    \begin{enumerate}
+        \item A bipartite graph $G = (X, Y, E)$ has a perfect matching covering $X$ iff for all $S \subseteq X$:
+        \[
+            |N(S)| \ge |S|
+        \]
+        where $N(S) = \{y \in Y \mid \exists x \in S \land (x, y) \in E\}$
+        \item Equivalent flow construction:
+        \begin{itemize}
+            \item Add source $s$, connect $s \rightarrow x$ for each $x \in X$ with capacity $1$.
+            \item Connect $y \rightarrow t$ for each $y \in Y$ with capacity $1$.
+            \item For each $(x, y) \in E$, connect $x \rightarrow y$ with capacity $1$.
+            \item Run max flow; perfect matching exists iff flow $= |X|$.
+        \end{itemize}
+        \item Useful for checking existence of perfect assignment or matching constraints.
+    \end{enumerate}
+\end{itemize}
+
+\begin{itemize}
+    \item Kőnig’s Theorem (Bipartite Graphs)
+    \begin{enumerate}
+        \item In any bipartite graph $G = (X, Y, E)$:
+        \[
+            \text{Maximum Matching Size} = \text{Minimum Vertex Cover Size}
+        \]
+        \item Construction of minimum vertex cover from maximum matching $M$:
+        \begin{enumerate}
+            \item Redirect every edge: $y \rightarrow x$ if $(x, y) \in M$, $x \rightarrow y$ otherwise.
+            \item DFS from unmatched vertices in $X$.
+            \item $x \in X$ is chosen iff $x$ is unvisited.
+            \item $y \in Y$ is chosen iff $y$ is visited.
+        \end{enumerate}
+        \item Minimum edge cover:
+        \[
+            |E_{\min\_cover}| = |V| - |M|
+        \]
+    \end{enumerate}
+\end{itemize}

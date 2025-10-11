@@ -33,6 +33,8 @@ include:
     - GNU PBDS:
       - ds/pbds.hpp
       - ds/order-stats.hpp
+    - Persistent seg tree:
+      - ds/persist.hpp
     - Line Container:
       - ds/line-container.hpp
     - Li-Chao Tree:
@@ -46,6 +48,8 @@ include:
   - Graph:
     - Modeling:
       - graph/model.tex
+    - Low link:
+      - graph/lowlink.hpp
     - Shortest paths:
       - Dial's algorithm:
         - graph/dial.hpp
@@ -71,6 +75,12 @@ include:
         - graph/func.hpp
   - Math:
     - Number Theory:
+      - Theorems:
+        - math/number-theory/theorems.tex
+      - Euler's Totient Function:
+        - math/number-theory/totient.hpp
+      - Möbius Function:
+        - math/number-theory/mobius.hpp
       - Mod Struct:
         - math/number-theory/modular.tex
         - math/number-theory/modular.hpp
@@ -117,6 +127,8 @@ include:
         - geometry/spherical.hpp
     - Segments:
       - geometry/segments.hpp
+    - Pick's theorem:
+      - geometry/pick.tex
     - Convex Hull:
       - geometry/convex-hull.hpp
     - Angular Sort:

@@ -5,9 +5,9 @@ struct Dinic {
   static constexpr int MAXN = 1000, MAXF = 1e9;
   vector<edge> v[MAXN];
   int top[MAXN], deep[MAXN], side[MAXN], s, t;
-  void make_edge(int s, int t, int cap) {
+  void make_edge(int s, int t, int cap, int rcap = 0) {
     v[s].push_back({t, cap, 0, (int)v[t].size()});
-    v[t].push_back({s, 0, 0, (int)v[s].size() - 1});
+    v[t].push_back({s, rcap, 0, (int)v[s].size() - 1});
   }
   int dfs(int a, int flow) {
     if (a == t || !flow) return flow;
