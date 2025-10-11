@@ -1,4 +1,4 @@
-// source: tko919
+/// source: tko919
 
 // g: L->R, directed
 // returns L[i]'s mate
