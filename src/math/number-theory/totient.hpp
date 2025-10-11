@@ -1,3 +1,5 @@
+/// source: sotanishy
+
 long long totient(long long n) {
   long long ret = n;
   if (n % 2 == 0) {

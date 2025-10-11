@@ -54,6 +54,10 @@ include:
       - Dial's algorithm:
         - graph/dial.hpp
     - Matching/Flows:
+      - Bipartite Matching:
+        - graph/flows/bipart-match.hpp
+      - General Matching:
+        - graph/flows/max-general.hpp
       - Dinic's Algorithm:
         - graph/flows/dinic.hpp
       - Minimum Cost Flow:

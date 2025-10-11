@@ -1,3 +1,5 @@
+/// source: sotanishy
+
 int mobius(long long n) {
   long long ret = 1;
   if (n % 4 == 0) return 0;
