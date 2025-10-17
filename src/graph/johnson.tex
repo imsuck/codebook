@@ -1,0 +1,6 @@
+% source: monogon
+
+1. Add edges $\forall v:(s, v, \text{weight}=0)$ and $p(v) = dist(s \rightarrow v)$\\
+2. New weight: $w'(u \rightarrow v) = w(u \rightarrow v) + p(u) - p(v)$\\
+3. All-pairs shortest path with dijkstra\\
+4. $dist(u \rightarrow v) = dist'(u \rightarrow v) - p(u) + p(v)$

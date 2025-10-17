@@ -33,6 +33,8 @@ include:
     - GNU PBDS:
       - ds/pbds.hpp
       - ds/order-stats.hpp
+    - Offline 2D Fenwick:
+      - ds/offline2dfenwick.hpp
     - Persistent seg tree:
       - ds/persist.hpp
     - Line Container:
@@ -50,9 +52,13 @@ include:
       - graph/model.tex
     - Low link:
       - graph/lowlink.hpp
+    - Block Cut Tree:
+      - graph/block_cut.hpp
     - Shortest paths:
-      - Dial's algorithm:
+      - Dial's Algorithm:
         - graph/dial.hpp
+      - Johnson's Algorithm:
+        - graph/johnson.tex
     - Matching/Flows:
       - Bipartite Matching:
         - graph/flows/bipart-match.hpp
@@ -74,6 +80,8 @@ include:
         - graph/2sat.hpp
     - Manhattan Distance MST:
       - graph/manhattan-mst.hpp
+    - Counting C3/C4:
+      - graph/cycl-34.hpp
     - Functional graph:
       - Loops:
         - graph/func.hpp
@@ -92,6 +100,8 @@ include:
         - math/number-theory/miller-rabin.hpp
       - Pollard's Rho:
         - math/number-theory/pollard-rho.hpp
+    - Iterate `floor(n/i)`:
+      - math/floors.hpp
     - Combinatorics:
       - Formulas:
         - math/combinatorics/formulas.tex
@@ -148,6 +158,8 @@ include:
     - Closest Pair:
       - geometry/closest-pair.hpp
   - Strings:
+    - Aho-Corasick:
+      - strings/aho.hpp
     - Knuth-Morris-Pratt Algorithm:
       - strings/kmp.hpp
     - Suffix Array:
